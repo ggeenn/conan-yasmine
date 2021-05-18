@@ -41,14 +41,12 @@ set(SX_RAPIDJSON ${CONAN_INCLUDE_DIRS_RAPIDJSON}/rapidjson)
     def package(self):
         dest = os.getenv("CONAN_IMPORT_PATH", "bin")
         print("IMPORT : " + dest)
-        #self.copy('*', dst='scripts', src='sqlpp11/scripts')
         self.copy('*.hpp', dst='include/yasmine', src='yasmine/libyasmine/include')
-                                                         #yasmine/externals/essentials/include/essentials/compatibility/compatibility.hpp
-                                                         #yasmine/externals/essentials/include/essentials/
+
         self.copy('*.hpp', dst='include/essentials',               src='yasmine/externals/essentials/include/essentials')
         self.copy('*.hpp', dst='include/essentials/compatibility', src='yasmine/externals/essentials/include/essentials/compatibility')
 
-        self.copy('*.hpp', dst='include/hermes', src='yasmine/externals/hermes/source/hermes/include/hermes')
+        self.copy('*.hpp', dst='include/hermes',                   src='yasmine/externals/hermes/include/hermes')
 
         self.copy('*.so*', dst='lib', src='lib')
         self.copy('*', dst='bin', src='bin')
