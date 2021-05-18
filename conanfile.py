@@ -23,8 +23,9 @@ class sqlpp11Conan(ConanFile):
 project(yasmine)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
-include_directories(${CONAN_INCLUDE_DIRS_RAPIDJSON})
+
 set(SX_BOOST_LIB_INCLUDE ${CONAN_INCLUDE_DIRS_BOOST})
+set(SX_RAPIDJSON ${CONAN_INCLUDE_DIRS_RAPIDJSON})
 '''
         )
         replace_in_file('yasmine/CMakeLists.txt',
