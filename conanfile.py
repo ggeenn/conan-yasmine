@@ -25,7 +25,7 @@ include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
 set(SX_BOOST_LIB_INCLUDE ${CONAN_INCLUDE_DIRS_BOOST})
-set(SX_RAPIDJSON ${CONAN_INCLUDE_DIRS_RAPIDJSON})
+set(SX_RAPIDJSON ${CONAN_INCLUDE_DIRS_RAPIDJSON}/rapidjson)
 '''
         )
         replace_in_file('yasmine/CMakeLists.txt',
