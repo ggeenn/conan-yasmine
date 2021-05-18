@@ -43,9 +43,10 @@ set(SX_RAPIDJSON ${CONAN_INCLUDE_DIRS_RAPIDJSON}/rapidjson)
         print("IMPORT : " + dest)
         #self.copy('*', dst='scripts', src='sqlpp11/scripts')
         self.copy('*.hpp', dst='include/yasmine', src='yasmine/libyasmine/include')
-
-        self.copy('*.hpp', dst='include/essentials', src='yasmine/externals/essentials/source/essentials/include/essentials')
-        self.copy('*.hpp', dst='include/essentials/compatibility', src='yasmine/externals/essentials/source/essentials/include/essentials/compatibility')
+                                                         #yasmine/externals/essentials/include/essentials/compatibility/compatibility.hpp
+                                                         #yasmine/externals/essentials/include/essentials/
+        self.copy('*.hpp', dst='include/essentials',               src='yasmine/externals/essentials/include/essentials')
+        self.copy('*.hpp', dst='include/essentials/compatibility', src='yasmine/externals/essentials/include/essentials/compatibility')
 
         self.copy('*.hpp', dst='include/hermes', src='yasmine/externals/hermes/source/hermes/include/hermes')
 
