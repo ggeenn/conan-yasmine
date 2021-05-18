@@ -15,7 +15,7 @@ class sqlpp11Conan(ConanFile):
     requires = "boost/1.74.0", "rapidjson/cci.20200410"
 
     def source(self):
-        self.run('git clone https://github.com/SeadexGmbH/yasmine.git')
+        self.run('git clone -b "v1.4.1" --single-branch https://github.com/SeadexGmbH/yasmine.git')
         replace_in_file(
             'yasmine/CMakeLists.txt',
             'project(yasmine)',
